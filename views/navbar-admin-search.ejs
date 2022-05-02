@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-md navbar-light bg-dark">
+  <ul class="navbar-nav">
+      <li><a href="/" class="navbar-brand"><i class="fas fa-shipping-fast text-warning fa-2x">Tdac Shop</i></a></li>
+      <li class="navbar-brand"><a style="color: white;" href="/">หน้าแรก</a></li>
+      <li class="nav-item dropdown"><a class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+        href="" data-toggle="dropdown">ระบบหลังบ้าน</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/manage">จัดการสินค้า</a>
+          <a class="dropdown-item" href="/add-product">บันทึกสินค้า</a>
+          <a class="dropdown-item" href="/logout">ออกจากระบบ</a>
+        </div>
+      </li>
+      <li><form class="d-flex" method="GET" action="/search" >
+          <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search" name="keyword">
+          <button class="btn btn-outline-success" type="submit">ค้นหา</button>
+        </form>
+      </li>
+  </ul>
+</nav>

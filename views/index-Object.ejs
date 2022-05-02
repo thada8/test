@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EJS Template | ส่งข้อมูลแบบ Object </h1> 
+    <% Object.values(products).forEach(function(item){ %>
+        <p><img src="<%= item.img %>" ></p>    
+        <p>ชื่อสินค้า : <%= item.name %> </p>
+        <p>ราคา : <%= item.price %> บาท</p>
+        
+        
+        <p>--------------------------</p>
+    <%}) %>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EJS Template | โครงสร้างควบคุมเงื่อนไข (if/else) </h1> 
+    <p>ชื่อ : <%= name %></p>
+    <p>อายุ : <%= age %> ปี </p>
+    <p>ที่อยู่ : <%= address %> </p>
+    <p>--------------------------</p>
+    <p> <%if(age>=18) {  %>
+        <h3>อายุมากกว่า 18 ปี</h3>
+        <% }else { %>
+         <h3>ไม่สามารถเข้าใช้งานได้</h3>
+        <% } %>
+
+    
+    </p>
+
+
+
+
+</body>
+</html>

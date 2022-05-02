@@ -1,0 +1,9 @@
+Hello Test.ejs
+<br>
+<br>
+<% function formatNumber(num){ %>
+<% return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')   %>
+<% } %>
+<% const item = 10000000  %>
+<% const result = formatNumber(item) %>
+<%= result %>

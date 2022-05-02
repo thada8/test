@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>หน้าแรก</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+      }
+      .header-menu, footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      .header-menu {
+        justify-content: left ;
+        height: 60px;
+        background: #3d3d3d;
+        color: #fff;
+      }
+
+      a {
+        color: blue;
+      }
+      a:hover {
+        color: orange;
+      }
+      h2 {
+        margin: 0 0 8px;
+      }
+      ul li {
+        display: inline-block;
+        padding: 0 10px;
+        list-style: none;
+      }
+      aside {
+        flex: 0.4;
+        height: 165px;
+        padding-left: 15px;
+        border-left: 1px solid #666;
+      }
+      section {
+        flex: 1;
+        padding-right: 15px;
+      }
+      footer {
+        padding: 0 10px;
+        background: #ccc;
+      }
+    </style>
+
+
+  </head>
+  <body>
+
+    <%- include('navbar.ejs') %>
+
+    <% function formatNumber(num){ %>
+    <% return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')   %>
+    <% } %>
+    
+    <div class="container">
+      <div class="row my-3">
+        <% Object.values(products).forEach(function(item){ %>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                  <a href="/product1.html"><img class="card-img-top" src="/images/products/<%= item.image %>" alt="" /></a>
+                  <div class="card-body">
+                      <h4 class="card-title">
+                          <a href="/product1.html"><%= item.name %></a>
+                      </h4>
+                      <h5>ราคา <%= formatNumber(item.price) %> บาท</h5>
+                      <p class="card-text"><%= item.description %></p>
+                  </div>
+              </div>
+          </div>
+          <%}) %>
+
+      </div>
+  </div>
+ 
+    <aside>
+      <h2>สินค้า</h2>
+      <p>กระเป๋า</p>
+      <p>รองเท้า</p>
+      <p>เสื้อผ้า</p>
+      <p>อุปกรณ์กีฬา</p>
+    </aside>
+
+  
+  </body>
+</html>
+
+
+
+<%- include('footer.ejs') %>
+</body>
+</html>

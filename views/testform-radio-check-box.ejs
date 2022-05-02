@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Form</title>
+</head>
+<body>
+<%= choiceradio %>
+<%= age %>
+<%= vehicle %>
+
+
+<h1>Display Radio Buttons & Check Box</h1>
+  <form>
+    <p>Please select your favorite Web language:</p>
+    <% if (choiceradio==="HTML"){  %>
+
+    <input type="radio" id="html" name="fav_language" value="HTML" checked>
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+
+    <% }else if(choiceradio==="CSS"){  %>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS" checked>
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+
+    <% }else if (choiceradio==="JavaScript"){  %>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript" checked>
+    <label for="javascript">JavaScript</label>
+
+    <% }else{console.log("Error")}  %>
+
+    <p>Please select your age:</p>
+
+    <% if (age==="0-30"){  %>
+  
+    <input type="radio" id="age1" name="age" value="0-30" checked >
+    <label for="age1">0 - 30</label><br>
+    <input type="radio" id="age2" name="age" value="31-60">
+    <label for="age2">31 - 60</label><br>  
+    <input type="radio" id="age3" name="age" value="61-100">
+    <label for="age3">61 - 100</label><br><br>
+    
+    <% }else if(age==="31-60"){  %>
+      <input type="radio" id="age1" name="age" value="0-30">
+    <label for="age1">0 - 30</label><br>
+    <input type="radio" id="age2" name="age" value="31-60" checked>
+    <label for="age2">31 - 60</label><br>  
+    <input type="radio" id="age3" name="age" value="61-100">
+    <label for="age3">61 - 100</label><br><br>
+    
+    <% }else if (age==="61-100"){  %>
+      <input type="radio" id="age1" name="age" value="0-30">
+    <label for="age1">0 - 30</label><br>
+    <input type="radio" id="age2" name="age" value="31-60">
+    <label for="age2">31 - 60</label><br>  
+    <input type="radio" id="age3" name="age" value="61-100" checked>
+    <label for="age3">61 - 100</label><br><br>
+    
+    <% }else{console.log("Error")}  %>
+
+    <% if (vehicle[0] && vehicle[1] && vehicle[2]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike" checked>
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car" checked>
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat" checked>
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else if(vehicle[0] && vehicle[1]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike" checked>
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car" checked>
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else if(vehicle[0] && vehicle[2]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike" checked>
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat" checked>
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else if(vehicle[1] && vehicle[2]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car" checked>
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat" checked>
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else if(vehicle[0]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike" checked>
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else if(vehicle[1]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car" checked>
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else if(vehicle[2]){  %>
+      <input type="checkbox" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat" checked>
+      <label for="vehicle3"> I have a boat</label><br><br>
+  
+    <% }else{  %>
+      <input type="checkbox" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+      
+    <% }  %>
+
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

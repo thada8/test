@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EJS Template | ส่งข้อมูลแบบ Array</h1> 
+    <p>รายการสินค้า : <%= products %></p>
+    <p>--------------------------</p>
+    <p>สินค้า : <%= products[0] %> </p>
+    <p>สินค้า : <%= products[1] %> </p>
+    <p>สินค้า : <%= products[2] %> </p>
+    <p>สินค้า : <%= products[3] %> </p>
+    <p>--------------------------</p>
+    <% for(i=0;i<products.length;i++){ %>
+    <p>สินค้าลำดับที่ <%= i+1 %> : <%= products[i] %>  </p>
+    <%} %>
+    <p>--------------------------</p>
+    <ol>
+    <% for(index in products){ %>
+        <li><%= products[index] %>  </li>
+        <%} %>
+    </ol>
+    <p>--------------------------</p>
+
+
+
+
+    </p>
+
+
+
+</body>
+</html>
